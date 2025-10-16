@@ -14,6 +14,15 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+const corsOptions = {
+  origin: 'https://sales-management-tool-1-nvcl.onrender.com', // Your frontend URL
+  methods: 'GET,POST,PUT,DELETE', // Allowed HTTP methods
+  credentials: true, // Allow cookies and authorization headers
+};
+
+app.use(cors(corsOptions));
+
+
 // connect DB
 connectDB();
 
