@@ -68,7 +68,7 @@ const LoginPage = () => {
         navigate('/');
       } else {
         // Register logic
-        const res = await axios.post('hhttps://sales-management-tool-backend.onrender.com/api/auth/register', {
+        const res = await axios.post('https://sales-management-tool-backend.onrender.com/api/auth/register', {
           name: formData.name,
           email: formData.email,
           password: formData.password,
